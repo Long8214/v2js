@@ -1,18 +1,18 @@
 <template>
-    <dav-carousel :items="carouselData" @change="handleChange">
-      <div slot="item" slot-scope="{item}">
-        <div :class="['carousel-item', item.customClass]">
-          <label>{{ item.id }}</label>
-          <label>{{ item.name }}</label>
-          <label>{{ item.value }}</label>
-        </div>
-      </div>
-    </dav-carousel>
+ <!-- <div>123</div> -->
+ <dv-scroll-board :items="carouselData" @change="handleChange">
+  <div slot="item" slot-scope="{item}">
+    <div :class="['carousel-item', item.customClass]">
+      <label>{{ item.id }}</label>
+      <label>{{ item.name }}</label>
+      <label>{{ item.value }}</label>
+    </div>
+  </div>
+</dv-scroll-board>
   </template>
   
   <script>
     export default {
-      namme:'testDatav',
       data() {
         return {
           selectedRowIndex: -1,

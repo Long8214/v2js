@@ -153,10 +153,10 @@ export default {
       let arr = info.map(item=>item.dictLabel)
       let arr1 = info.map(item=>item.dictValue)
       console.log(arr,arr1)
-      let tMoeny = { "2": "150.00",'3':'1123'}
-      let tPen = { "2": "2" ,'3':'1'}
-      let yMoeny = {  "1": "5424.00",  "2": "88872.63",'6':'321'}
-      let yPen = {"1": "26","2": "437",'6':'1'}
+      let tMoeny = { "2": "150.00",'3':'1123'}  //今日金额
+      let tPen = { "2": "2" ,'3':'1'}         //今日笔数
+      let yMoeny = {  "1": "5424.00",  "2": "88872.63",'6':'321'}  //昨日金额
+      let yPen = {"1": "26","2": "437",'6':'1'}   //昨日笔数
     //   今日数据
       let TData = []
     //   昨日数据

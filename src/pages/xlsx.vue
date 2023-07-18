@@ -9,9 +9,6 @@
     import { importExcelFile } from '../utils/excelFile'
     export default {
       methods: {
-        // add(){
-        //   this.
-        // },
         async handleImportExcel(e) {
           const file = e.target.files[0]
           const jsonData = await importExcelFile(file)

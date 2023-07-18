@@ -1,109 +1,156 @@
 
 <template>
   <div class="rsa-container">
-<!-- <tableCeshi></tableCeshi> -->
+    <!--  Rsa 加密 解密   X-->
+    <!-- <rsaEncryption></rsaEncryption> -->
 
-    <!-- ceshi -->
-    <!-- <ceshi></ceshi>  -->
+    <!-- 拖拽或点击上传excel 自动解析到表格展示 可重置 -->
+    <!-- <exlx2></exlx2> -->
 
-    <!-- <el-input  v-model="password"  @input="reqTest()"  placeholder="请输入密码"></el-input>
-    <div>输入的密码 : {{ password }}</div>
-    <div>加密后的密码 : {{ rsaPassword }}</div>
-    <div>解密后的密码 : {{ encPassword }}</div>
+    <!-- 点击上传按钮选择时间并可上传excel  解析版 -->
+    <!-- <loadAnalysisExcel></loadAnalysisExcel> -->
 
-    <div class="exlx">
+    <!-- 数据筛选 大屏支付方式 -->
+    <!-- <dataScreen></dataScreen>  -->
 
-      <exlx2></exlx2>
-    </div> -->
+    <!-- 类似58同城筛选栏布局 -->
     <!-- <a_map></a_map> -->
+
+    <!-- excel上传解码 -->
     <!-- <exlx></exlx> -->
-    <!-- 
 
- <el-dropdown trigger="click" :visible-change="true">
-      <span class="el-dropdown-link">
-        点击上传excel<i class="el-icon-arrow-down el-icon--right"></i>
-      </span>
-      <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item> <el-date-picker   v-model="params.year"   value-format="yyyy"   format="yyyy"   type="year"   prefix-icon=" " ></el-date-picker></el-dropdown-item>
-        <el-dropdown-item><el-button :disabled="!params.year"  @click="upload"><i class="el-icon-plus"></i>上传</el-button></el-dropdown-item>
-      </el-dropdown-menu> 
-    
+    <!-- datav轮播表 -->
+    <!-- <testDatav></testDatav> -->
 
-    </el-dropdown>
-    <input ref="excel-upload-input" style="display:none" type="file"  accept=".xlsx, .xls" @change="handleImportExcel" />
-     -->
+    <!-- el-table 轮播表  不截取方法 -->
+    <!-- <tableScroll></tableScroll> -->
 
-     <!-- 可用 -->
-     <!-- <el-popover>
-      <template #reference >
-        <el-button style="margin-right: 16px" type="primary">上传 Excel</el-button>
-      </template>
-      <el-date-picker   v-model="params.year"   value-format="yyyy"   format="yyyy"   type="year"   prefix-icon=" " ></el-date-picker>
-      <el-button :disabled="!params.year"  @click="upload"><i class="el-icon-plus"></i>上传</el-button>
-      <input ref="excel-upload-input" style="display:none" type="file"  accept=".xlsx, .xls" @change="handleImportExcel" />
-     </el-popover> -->
-     <!-- <test></test> -->
+    <!-- el-table 轮播表  截取方法 -->
+    <!-- <tableCeshi></tableCeshi> -->
 
+    <!-- 折叠面板表头固定不参与滚动 -->
+    <!-- <collapseTitle></collapseTitle> -->
 
+    <!-- rem适配测试 -->
+    <!-- <remFit></remFit> -->
 
-     <!-- datav轮播表 -->
-     <testDatav></testDatav>
+    <!-- table表单测试 -->
+    <!-- <Table></Table> -->
+
+    <!-- table表单循环校验 -->
+    <!-- <validateTable></validateTable> -->
+
+    <!-- ifram缝合项目 -->
+    <!-- <projectIframe></projectIframe> -->
+
+    <!-- el-dialog去除遮罩层   X -->
+    <!-- <modelDialog></modelDialog> -->
+
+    <!-- el-input绑定正则 -->
+    <!-- <regexpInput></regexpInput> -->
+
+    <!-- 数组嵌套对象,数组长度不定的表单校验 -->
+    <!-- <verifyElForm></verifyElForm> -->
+
+    <!-- 人像检索 -->
+    <!-- <portraitRetrieval></portraitRetrieval> -->
+
+    <!-- echarts大数据测试 -->
+    <!-- <chart></chart> -->
+
+    <!-- echarts 水位图 legend icon图标自定义 有层级-->
+    <!-- <echartsWater></echartsWater> -->
   </div>
 </template>
 
+
+
+
 <script>
-import { importExcelFile } from "./utils/excelFile";
-import Rsa from "./utils/rsa";
-import test from "./components/test.vue";
-import exlx from "./components/xlsx.vue";
-import exlx2 from "./components/xlsx2.vue";
-import xd from "./components/xd";
-import ceshi from "./components/ceshi";
-import tableCeshi from './components/ceshi/tableCeshi.vue'
-import testDatav from './components/ceshi/testDatav.vue'
+import xd from "./pages/xd";
+import collapseTitle from "./pages/collapseTitle.vue";
+import exlx from "./pages/xlsx.vue";
+import exlx2 from "./pages/xlsx2.vue";
+import dataScreen from "./pages/dataScreen";
+import tableCeshi from "./pages/tableCeshi.vue";
+import testDatav from "./pages/testDatav.vue";
+import tableScroll from "./pages/tableScroll.vue";
+import Table from "./pages/Table.vue";
+import chart from "./pages/chart.vue";
+import validateTable from "./pages/validateTable.vue";
+import projectIframe from "./pages/projectIframe.vue";
+import modelDialog from "./pages/modelDialog.vue";
+import regexpInput from "./pages/regexpInput.vue";
+import loadAnalysisExcel from "./pages/loadAnalysisExcel.vue";
+import rsaEncryption from "./pages/rsaEncryption.vue";
+import verifyElForm from "./pages/verifyElForm.vue";
+import portraitRetrieval from "./pages/portraitRetrieval.vue";
+import echartsWater from "./pages/echartsWater.vue";
+import remFit from "./pages/remFit.vue";
+
+
 export default {
-  components: { exlx, exlx2, test,ceshi, tableCeshi,testDatav,
-    'a_map':xd,
+  components: {
+    exlx,
+    exlx2,
+    dataScreen,
+    tableCeshi,
+    testDatav,
+    tableScroll,
+    collapseTitle,
+    Table,
+    chart,
+    validateTable,
+    projectIframe,
+    modelDialog,
+    regexpInput,
+    loadAnalysisExcel,
+    rsaEncryption,
+    verifyElForm,
+    portraitRetrieval,
+    echartsWater,
+    remFit,
+    'a_map': xd,
   },
   data() {
     // 定义数据
     return {
-      password: "", //密码
-      rsaPassword: "", //加密后的密码
-      encPassword: "", //解密后的密码
-      params: {
-        year: "",
-      },
+    
+
     };
   },
-  methods: {
-    // 定义方法
-    reqTest() {
-      this.rsaPassword = Rsa.encrypt(this.password); // 加密
-      this.encPassword = Rsa.decrypt(this.rsaPassword); // 解密
-    },
-    upload() {
-      this.$refs["excel-upload-input"].click();
-    },
-    async handleImportExcel(e) {
-      const file = e.target.files[0];
-      const jsonData = await importExcelFile(file);
-      console.log(JSON.parse(JSON.stringify(jsonData)));
-    },
-  },
-  computed: {
-    // rsaPassword(){
-    //   return this.Rsa.encrypt(this.password);
-    // },
-    // encPassword(){
-    //   return this.Rsa.encrypt(this.rsaPassword);
-    // },
-  },
+  
 };
 </script>
 <style>
-  .a{
-    
+*{
+  margin: 0;
+  padding: 0;
+}
+body,html{
+  height: 100%;
+}
+html {
+  font-size: 10px;
+}
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 10px;
   }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 20px;
+  }
+}
+.rsa-container{
+  height: 100%;
+}
+
 </style>
 
