@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script >
+    var myWorker = new Worker('myWebWorker.js');
+    // 给子线程发送程序
+    myWorker.postMessage(500)
+
+    myWorker.onmessage = function (param) {
+        console.log('子线程回传的信息',param.data)
+      }
+    </script>
+</body>
+</html>

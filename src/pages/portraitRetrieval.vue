@@ -1,6 +1,6 @@
 <template>
   <div>
-    <WebCam :height="400" :width="200" ref="webcam"></WebCam>
+    <!-- <WebCam :height="400" :width="200" ref="webcam"></WebCam> -->
     <button @click="capture">Capture</button>
     <el-button @click="start">开启</el-button>
     <el-button @click="stop">结束</el-button>
@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import {WebCam} from 'vue-web-cam';
+// import {WebCam} from 'vue-web-cam';
 export default {
   components: {
-    WebCam
+    // WebCam
   },
   data(){
     return {

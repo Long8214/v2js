@@ -60,6 +60,15 @@
 
     <!-- echarts 水位图 legend icon图标自定义 有层级-->
     <!-- <echartsWater></echartsWater> -->
+
+    <!-- 点击按钮创建新页面并打开指定的url  X-->
+    <!-- <createWindowBlank></createWindowBlank> -->
+
+    <!-- 内容横向滚动-->
+    <contentRoll></contentRoll>
+
+    <!-- webWorker -->
+    <!-- <webWorker></webWorker> -->
   </div>
 </template>
 
@@ -87,10 +96,16 @@ import verifyElForm from "./pages/verifyElForm.vue";
 import portraitRetrieval from "./pages/portraitRetrieval.vue";
 import echartsWater from "./pages/echartsWater.vue";
 import remFit from "./pages/remFit.vue";
+import createWindowBlank from "./pages/createWindowBlank.vue";
+import contentRoll from "./pages/contentRoll.vue";
+import webWorker from "./pages/webWorker.vue";
 
 
 export default {
   components: {
+    contentRoll,
+    webWorker,
+    createWindowBlank,
     exlx,
     exlx2,
     dataScreen,
