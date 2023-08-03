@@ -65,10 +65,13 @@
     <!-- <createWindowBlank></createWindowBlank> -->
 
     <!-- 内容横向滚动-->
-    <contentRoll></contentRoll>
+    <!-- <contentRoll></contentRoll> -->
 
     <!-- webWorker -->
     <!-- <webWorker></webWorker> -->
+
+    <!-- 点击搜索按钮检索 -->
+    <searchTabel></searchTabel>
   </div>
 </template>
 
@@ -99,10 +102,12 @@ import remFit from "./pages/remFit.vue";
 import createWindowBlank from "./pages/createWindowBlank.vue";
 import contentRoll from "./pages/contentRoll.vue";
 import webWorker from "./pages/webWorker.vue";
+import searchTabel from "./pages/searchTabel.vue";
 
 
 export default {
   components: {
+    searchTabel,
     contentRoll,
     webWorker,
     createWindowBlank,
@@ -162,9 +167,6 @@ html {
   html {
     font-size: 20px;
   }
-}
-.rsa-container{
-  height: 100%;
 }
 
 </style>
