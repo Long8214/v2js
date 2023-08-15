@@ -79,6 +79,9 @@
     <!-- videoJs 倍速播放-->
     <!-- <tcPlayer></tcPlayer> -->
 
+    <!-- echarts 数据匹配 -->
+    <echartsDataMatching></echartsDataMatching>
+
   </div>
 </template>
 
@@ -112,13 +115,14 @@ import webWorker from "./pages/webWorker.vue";
 import searchTabel from "./pages/searchTabel.vue";
 import echartVerticalSection from "./pages/echartVerticalSection.vue";
 import tcPlayer from "./pages/tcPlayer.vue";
+import echartsDataMatching from "./pages/echartsDataMatching.vue";
 
 
 export default {
   components: {
     tcPlayer,
     echartVerticalSection,
-    timePicker,
+    echartsDataMatching,
     searchTabel,
     contentRoll,
     webWorker,
