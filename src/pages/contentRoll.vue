@@ -10,10 +10,11 @@
     export default {
       data () {
         return {
-          defaultTxt: '测试环境用于测试测试环境用于测试测试环境用于测试测试环境用于...',
+          // defaultTxt: '测试环境用于测试测试环境用于测试测试环境用于测试测试环境用于...',
           notice: ''
         }
       },
+      props:['defaultTxt'],
       mounted () {
         this.getStyle()
         window.addEventListener('resize', throttle(this.getStyle, 1000, true))
@@ -35,6 +36,11 @@
               this.$refs.notice.style.animationDuration = 0
             }
           })
+        }
+      },
+      watch:{
+        defaultTxt(){
+          this.getStyle()
         }
       },
       destroyed () {

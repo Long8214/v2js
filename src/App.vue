@@ -65,13 +65,20 @@
     <!-- <createWindowBlank></createWindowBlank> -->
 
     <!-- 内容横向滚动-->
-    <!-- <contentRoll></contentRoll> -->
+    <!-- <contentRoll :defaultTxt="val"></contentRoll> -->
 
     <!-- webWorker -->
     <!-- <webWorker></webWorker> -->
 
     <!-- 点击搜索按钮检索 -->
-    <searchTabel></searchTabel>
+    <!-- <searchTabel></searchTabel> -->
+
+    <!-- echarts纵断面图 -->
+    <!-- <echartVerticalSection></echartVerticalSection> -->
+
+    <!-- videoJs 倍速播放-->
+    <!-- <tcPlayer></tcPlayer> -->
+
   </div>
 </template>
 
@@ -103,10 +110,15 @@ import createWindowBlank from "./pages/createWindowBlank.vue";
 import contentRoll from "./pages/contentRoll.vue";
 import webWorker from "./pages/webWorker.vue";
 import searchTabel from "./pages/searchTabel.vue";
+import echartVerticalSection from "./pages/echartVerticalSection.vue";
+import tcPlayer from "./pages/tcPlayer.vue";
 
 
 export default {
   components: {
+    tcPlayer,
+    echartVerticalSection,
+    timePicker,
     searchTabel,
     contentRoll,
     webWorker,
@@ -135,14 +147,19 @@ export default {
   data() {
     // 定义数据
     return {
-    
-
+      val:'测试环境用于测试测试环境用于测试测试环境用于测试测试环境用于...'
     };
   },
   
 };
 </script>
 <style>
+.el-scrollbar__view .disabled{
+  display: none;
+}
+.ant-time-picker-panel-combobox li[disabled]{
+display: none;
+}
 *{
   margin: 0;
   padding: 0;
