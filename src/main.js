@@ -8,7 +8,7 @@ import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 import 'video.js/dist/video-js.css'  //videojs样式
 // 1. 导入路由并使用
-import router from '../../../long/vue2-practice-code/src/router/router';
+import router from './router';
 
 
 Vue.use(ElementUI);

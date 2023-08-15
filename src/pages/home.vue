@@ -1,44 +1,124 @@
 <template>
-<div>
- <el-card class="body">
-
-  <router-link to="/tf_time"> <el-button type="primary">处理时间格式相关</el-button></router-link>
-  <router-link to="/exlx2"> <el-button type="primary">拖拽或点击上传excel 自动解析到表格展示 可重置</el-button></router-link>
-  <router-link to="/loadAnalysisExcel"> <el-button type="primary">点击上传按钮选择时间并可上传excel  解析版</el-button></router-link>
-  <router-link to="/rsaEncryption"> <el-button type="primary"> Rsa 加密 解密  解析版</el-button></router-link>
-  <router-link to="/dataScreen"> <el-button type="primary">数据筛选 大屏支付方式 </el-button></router-link>
-  <router-link to="/a_map "> <el-button type="primary">类似58同城筛选栏布局 </el-button></router-link>
-  <router-link to="/exlx "> <el-button type="primary"> excel上传解码 </el-button></router-link>
-  <router-link to="/testDatav "> <el-button type="primary"> datav轮播表 </el-button></router-link>
-  <router-link to="/tableScroll "> <el-button type="primary"> el-table 轮播表  不截取方法 </el-button></router-link>
-  <router-link to="/tableCeshi "> <el-button type="primary"> el-table 轮播表  截取方法 </el-button></router-link>
-  <router-link to="/collapseTitle "> <el-button type="primary">折叠面板表头固定不参与滚动 </el-button></router-link>
-  <router-link to="/remFit "> <el-button type="primary">rem适配测试 </el-button></router-link>
-  <router-link to="/Table "> <el-button type="primary">table表单测试 </el-button></router-link>
-  <router-link to="/validateTable "> <el-button type="primary">table表单循环校验 </el-button></router-link>
-  <router-link to="/projectIframe "> <el-button type="primary">ifram缝合项目 </el-button></router-link>
-  <router-link to="/modelDialog "> <el-button type="primary">el-dialog去除遮罩层 </el-button></router-link>
-  <router-link to="/regexpInput "> <el-button type="primary">el-input绑定正则 </el-button></router-link>
-  <router-link to="/verifyElForm "> <el-button type="primary"> 数组嵌套对象,数组长度不定的表单校验 </el-button></router-link>
-  <router-link to="/portraitRetrieval "> <el-button type="primary"> 人像检索 </el-button></router-link>
-  <router-link to="/chart "> <el-button type="primary"> echarts大数据测试 </el-button></router-link>
-  <router-link to="/echartsWater "> <el-button type="primary"> echarts 水位图 legend icon图标自定义 有层级 </el-button></router-link>
-  <router-link to="/createWindowBlank "> <el-button type="primary">点击按钮创建新页面并打开指定的url </el-button></router-link>
-  <router-link to="/contentRoll "> <el-button type="primary">内容横向滚动 </el-button></router-link>
-  <router-link to="/webWorker "> <el-button type="primary">webWorker </el-button></router-link>
-  <router-link to="/searchTabel "> <el-button type="primary">点击搜索按钮检索 </el-button></router-link>
-  <router-link to="/echartVerticalSection "> <el-button type="primary">echarts纵断面图 </el-button></router-link>
-  <router-link to="/tcPlayer "> <el-button type="primary"> videoJs 倍速播放 </el-button></router-link>
- </el-card>
-
-</div>
+  <section>
+    <el-card class="bodyLeft">
+     <router-link :to="i.link" v-for="i in data" :key="i.link"> <el-button type="primary" > {{ i.name }} </el-button></router-link>
+    </el-card>
+    <el-card  class="bodyRight">
+      <router-view></router-view>
+    </el-card>
+  </section>
 </template>
 <script >
 export  default {
   name:'home',
   data(){
     return{
-
+      data:[
+        {
+          link:'tf_time',
+          name:'处理时间格式相关'
+        },
+        {
+          link:'exlx2',
+          name:'拖拽或点击上传excel 自动解析到表格展示 可重置'
+        },
+        {
+          link:'loadAnalysisExcel',
+          name:'点击上传按钮选择时间并可上传excel  解析版'
+        },
+        {
+          link:'rsaEncryption',
+          name:'Rsa 加密 解密  解析版'
+        },
+        {
+          link:'dataScreen',
+          name:'数据筛选 大屏支付方式'
+        },
+        {
+          link:'a_map',
+          name:'类似58同城筛选栏布局'
+        },
+        {
+          link:'exlx',
+          name:'excel上传解码'
+        },
+        {
+          link:'testDatav',
+          name:'datav轮播表'
+        },
+        {
+          link:'tableScroll',
+          name:'el-table 轮播表  不截取方法'
+        },
+        {
+          link:'tableCeshi',
+          name:'el-table 轮播表  截取方法'
+        },
+        {
+          link:'collapseTitle',
+          name:'折叠面板表头固定不参与滚动'
+        },
+        {
+          link:'remFit',
+          name:'rem适配测试'
+        },
+        {
+          link:'Table',
+          name:'table表单测试'
+        },
+        {
+          link:'validateTable',
+          name:'table表单循环校验'
+        },
+        {
+          link:'projectIframe',
+          name:'ifram缝合项目'
+        },
+        {
+          link:'modelDialog',
+          name:'el-dialog去除遮罩层'
+        },
+        {
+          link:'regexpInput',
+          name:'el-input绑定正则'
+        },
+        {
+          link:'verifyElForm',
+          name:' 数组嵌套对象,数组长度不定的表单校验'
+        },
+        {
+          link:'portraitRetrieval',
+          name:'人像检索'
+        },
+        {
+          link:'chart',
+          name:'echarts大数据测试'
+        },
+        {
+          link:'echartsWater',
+          name:'echarts 水位图 legend icon图标自定义 有层级'
+        },
+        {
+          link:'createWindowBlank',
+          name:' 点击按钮创建新页面并打开指定的url'
+        },
+        {
+          link:'contentRoll',
+          name:'内容横向滚动'
+        },
+        {
+          link:'searchTabel',
+          name:'点击搜索按钮检索'
+        },
+        {
+          link:'echartVerticalSection',
+          name:' echarts纵断面图'
+        },
+        {
+          link:'tcPlayer',
+          name:'videoJs 倍速播放'
+        },
+      ]
     }
   },
   methods:{
@@ -47,10 +127,25 @@ export  default {
 
 </script>
 
-<style scoped>
-.body {
-  width: 80%;
-  height: 80%;
+<style scoped lang="less">
+
+section{
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  .bodyLeft {
+    overflow-y: auto;
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+  }
+  .bodyRight{
+    display: inline-block;
+
+    margin-left: 10px;
+    width: calc(80% - 10px);
+    height: 100%;
+  }
 }
 
 /deep/  .el-button--primary{
