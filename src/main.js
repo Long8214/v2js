@@ -7,7 +7,8 @@ import dataV from '@jiaminghi/data-view'
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 import 'video.js/dist/video-js.css'  //videojs样式
-
+// 1. 导入路由并使用
+import router from '../../../long/vue2-practice-code/src/router/router';
 
 
 Vue.use(ElementUI);
@@ -17,6 +18,6 @@ Vue.prototype.Rsa = Rsa // 将Rsa注册为公共方法,方便其他页面调用
 Vue.config.productionTip = false
 
 new Vue({
-
+  router,
   render: h => h(App),
 }).$mount('#app')

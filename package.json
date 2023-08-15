@@ -21,6 +21,7 @@
     "sass": "^1.63.5",
     "sass-loader": "^13.3.2",
     "vue": "^2.6.14",
+    "vue-router": "^3.6.5",
     "vue-seamless-scroll": "^1.1.23",
     "xlsx": "^0.18.5"
   },
@@ -48,7 +49,9 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "vue/multi-word-component-names": 0
+    }
   },
   "browserslist": [
     "> 1%",
