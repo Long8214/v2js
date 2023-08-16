@@ -1,47 +1,50 @@
+vue
 <template>
   <div>
-    <!-- <WebCam :height="400" :width="200" ref="webcam"></WebCam> -->
-    <button @click="capture">Capture</button>
-    <el-button @click="start">开启</el-button>
-    <el-button @click="stop">结束</el-button>
-    <img :src="imageSrc"  v-if="imageSrc"/>
+    <video ref="videoElement" style="width100px;height:100px"></video>
+    <button @click="takePhoto">拍照</button>
+    <img v-if="photoData" :src="photoData" alt="拍摄" style="width100px;height:100px">
   </div>
 </template>
 
 <script>
-// import {WebCam} from 'vue-web-cam';
+// import VueWebCam from 'vue-web-cam';
+
 export default {
   components: {
-    // WebCam
+    // VueWebCam
   },
-  data(){
+  data() {
     return {
-      imageSrc:''
-    }
-  },  
-  methods: {
-    async capture() {
-      this.imageSrc = await this.$refs.webcam.capture(r=>{
-        console.log(1111,r)
-      })
-      // 处理捕获的图像数据
-    },
-    start(){
-      // console.log(this.$refs.webcam.start())
-      this.$refs.webcam.snap(r=>{
-        console.log('r',r)
-      })
-
-    },
-    stop(){
-      this.$refs.webcam.stop();
-
-    }
+      photoData: null,
+      videoElement: null
+    };
   },
-  mounted(){
-    this.$refs.webcam.capture();
-
-    // console.log(this.$refs.webcam)
+  mounted() {
+    console.log(navigator)
+    this.videoElement = this.$refs.videoElement;
+    this.startCamera();
+  },
+  methods: {
+    startCamera() {
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+          this.videoElement.srcObject = stream;
+          this.videoElement.play();
+        })
+        .catch(error => {
+          this.$message.error('摄像头启动失败')
+        });
+    },
+    takePhoto() {
+      const canvas = document.createElement('canvas');
+      canvas.width = this.videoElement.videoWidth;
+      canvas.height = this.videoElement.videoHeight;
+      const context = canvas.getContext('2d');
+      context.drawImage(this.videoElement, 0, 0, canvas.width, canvas.height);
+      console.log(canvas.toDataURL())
+      this.photoData = canvas.toDataURL();
+    }
   }
-}
+};
 </script>
