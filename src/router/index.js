@@ -29,45 +29,46 @@ const  webWorker = () => import( '../pages/webWorker.vue' )
 const  searchTabel = () => import( '../pages/searchTabel.vue' )
 const  echartVerticalSection = () => import( '../pages/echartVerticalSection.vue' )
 const  tcPlayer = () => import( '../pages/tcPlayer.vue' )
+const  collapseTitle = () => import( '../pages/collapseTitle.vue' )
 
 // 使用Vue Router插件
 Vue.use(VueRouter);
 
 // 创建路由实例
 const router = new VueRouter({
-    path:'histray',
+    path:'history',
     routes: [
         { 
             path: '/',
             component: home ,
             redirect:'/tf_time',
             children:[
-                { path: 'tf_time', component: tf_time },
-                { path: 'exlx2', component: exlx2},
-                { path: 'loadAnalysisExcel', component: loadAnalysisExcel},
-                { path: 'rsaEncryption', component: rsaEncryption},
-                { path: 'dataScreen', component: dataScreen},
-                { path: 'a_map', component: a_map},
-                { path: 'exlx', component: exlx},
-                { path: 'tableCeshi', component: tableCeshi},
-                { path: 'testDatav', component: testDatav},
-                { path: 'tableScroll', component: tableScroll},
-                { path: 'Table', component: Table},
-                { path: 'chart', component: chart},
-                { path: 'validateTable', component: validateTable},
-                { path: 'projectIframe', component: projectIframe},
-                { path: 'modelDialog', component: modelDialog},
-                { path: 'regexpInput', component: regexpInput},
-                { path: 'verifyElForm', component: verifyElForm},
-                { path: 'portraitRetrieval', component: portraitRetrieval},
-                { path: 'echartsWater', component: echartsWater},
-                { path: 'remFit', component: remFit},
-                { path: 'createWindowBlank', component: createWindowBlank},
-                { path: 'contentRoll', component: contentRoll},
-                { path: 'webWorker', component: webWorker},
-                { path: 'searchTabel', component: searchTabel},
-                { path: 'echartVerticalSection', component: echartVerticalSection},
-                { path: 'tcPlayer', component: tcPlayer},
+                { path: 'tf_time', component: tf_time, meta:{name:'处理时间格式相关'}},
+                { path: 'exlx2', component: exlx2, meta:{name:'拖拽或点击上传excel 自动解析到表格展示 可重置'}},
+                { path: 'loadAnalysisExcel', component: loadAnalysisExcel, meta:{name:'点击上传按钮选择时间并可上传excel  解析版'}},
+                { path: 'rsaEncryption', component: rsaEncryption, meta:{name:'Rsa 加密 解密  解析版'}},
+                { path: 'dataScreen', component: dataScreen, meta:{name:'数据筛选 大屏支付方式'}},
+                { path: 'a_map', component: a_map, meta:{name:'类似58同城筛选栏布局'}},
+                { path: 'exlx', component: exlx, meta:{name:'excel上传解码'}},
+                { path: 'testDatav', component: testDatav, meta:{name:'datav轮播表'}},
+                { path: 'tableScroll', component: tableScroll, meta:{name:'el-table 轮播表  不截取方法'}},
+                { path: 'tableCeshi', component: tableCeshi, meta:{name:'el-table 轮播表  截取方法'}},
+                { path: 'collapseTitle', component: tableCeshi, meta:{name:'折叠面板表头固定不参与滚动'}},
+                { path: 'Table', component: Table, meta:{name:'table表单测试'}},
+                { path: 'chart', component: chart, meta:{name:'echarts大数据测试'}},
+                { path: 'validateTable', component: validateTable, meta:{name:'table表单循环校验'}},
+                { path: 'projectIframe', component: projectIframe, meta:{name:'ifram缝合项目'}},
+                { path: 'modelDialog', component: modelDialog, meta:{name:'el-dialog去除遮罩层'}},
+                { path: 'regexpInput', component: regexpInput, meta:{name:'el-input绑定正则'}},
+                { path: 'verifyElForm', component: verifyElForm, meta:{name:'数组嵌套对象,数组长度不定的表单校验'}},
+                { path: 'portraitRetrieval', component: portraitRetrieval, meta:{name:'人像检索'}},
+                { path: 'echartsWater', component: echartsWater, meta:{name:'echarts 水位图 legend icon图标自定义 有层级'}},
+                { path: 'remFit', component: remFit, meta:{name:'rem适配测试'}},
+                { path: 'createWindowBlank', component: createWindowBlank, meta:{name:'点击按钮创建新页面并打开指定的url'}},
+                { path: 'contentRoll', component: contentRoll, meta:{name:'内容横向滚动'}},
+                { path: 'searchTabel', component: searchTabel, meta:{name:'点击搜索按钮检索'}},
+                { path: 'echartVerticalSection', component: echartVerticalSection, meta:{name:'echarts纵断面图'}},
+                { path: 'tcPlayer', component: tcPlayer, meta:{name:'videoJs 倍速播放'}},
             ]
         },
     
