@@ -44,4 +44,7 @@ section{
 /deep/  .el-button--primary{
   margin: 6px;
 }
+/deep/ .el-card__body{
+  height: 100%;
+}
 </style>

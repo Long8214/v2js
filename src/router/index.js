@@ -30,6 +30,7 @@ const  searchTabel = () => import( '../pages/searchTabel.vue' )
 const  echartVerticalSection = () => import( '../pages/echartVerticalSection.vue' )
 const  tcPlayer = () => import( '../pages/tcPlayer.vue' )
 const  collapseTitle = () => import( '../pages/collapseTitle.vue' )
+const  map = () => import( '../pages/map.vue' )
 
 // 使用Vue Router插件
 Vue.use(VueRouter);
@@ -53,7 +54,7 @@ const router = new VueRouter({
                 { path: 'testDatav', component: testDatav, meta:{name:'datav轮播表'}},
                 { path: 'tableScroll', component: tableScroll, meta:{name:'el-table 轮播表  不截取方法'}},
                 { path: 'tableCeshi', component: tableCeshi, meta:{name:'el-table 轮播表  截取方法'}},
-                { path: 'collapseTitle', component: tableCeshi, meta:{name:'折叠面板表头固定不参与滚动'}},
+                { path: 'collapseTitle', component: collapseTitle, meta:{name:'折叠面板表头固定不参与滚动'}},
                 { path: 'Table', component: Table, meta:{name:'table表单测试'}},
                 { path: 'chart', component: chart, meta:{name:'echarts大数据测试'}},
                 { path: 'validateTable', component: validateTable, meta:{name:'table表单循环校验'}},
@@ -69,6 +70,7 @@ const router = new VueRouter({
                 { path: 'searchTabel', component: searchTabel, meta:{name:'点击搜索按钮检索'}},
                 { path: 'echartVerticalSection', component: echartVerticalSection, meta:{name:'echarts纵断面图'}},
                 { path: 'tcPlayer', component: tcPlayer, meta:{name:'videoJs 倍速播放'}},
+                { path: 'map', component: map, meta:{name:'map'}},
             ]
         },
     
