@@ -31,7 +31,7 @@ const  echartVerticalSection = () => import( '../pages/echartVerticalSection.vue
 const  tcPlayer = () => import( '../pages/tcPlayer.vue' )
 const  collapseTitle = () => import( '../pages/collapseTitle.vue' )
 const  map = () => import( '../pages/map.vue' )
-
+const  dealPhoneNum = () => import('../pages/dealPhoneNum.vue')
 // 使用Vue Router插件
 Vue.use(VueRouter);
 
@@ -71,6 +71,7 @@ const router = new VueRouter({
                 { path: 'echartVerticalSection', component: echartVerticalSection, meta:{name:'echarts纵断面图'}},
                 { path: 'tcPlayer', component: tcPlayer, meta:{name:'videoJs 倍速播放'}},
                 { path: 'map', component: map, meta:{name:'map'}},
+                { path: 'dealPhoneNum', component: dealPhoneNum, meta:{name:'手机号中间4位脱敏'}},
             ]
         },
     
