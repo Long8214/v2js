@@ -31,6 +31,7 @@ const  echartVerticalSection = () => import( '../pages/echartVerticalSection.vue
 const  tcPlayer = () => import( '../pages/tcPlayer.vue' )
 const  collapseTitle = () => import( '../pages/collapseTitle.vue' )
 const  map = () => import( '../pages/map.vue' )
+const  pixiJs = () => import( '../pages/pixiJs.vue' )
 
 // 使用Vue Router插件
 Vue.use(VueRouter);
@@ -44,6 +45,7 @@ const router = new VueRouter({
             component: home ,
             redirect:'/tf_time',
             children:[
+                { path: 'pixiJs', component: pixiJs, meta:{name:'pixiJS练习'}},
                 { path: 'tf_time', component: tf_time, meta:{name:'处理时间格式相关'}},
                 { path: 'exlx2', component: exlx2, meta:{name:'拖拽或点击上传excel 自动解析到表格展示 可重置'}},
                 { path: 'loadAnalysisExcel', component: loadAnalysisExcel, meta:{name:'点击上传按钮选择时间并可上传excel  解析版'}},

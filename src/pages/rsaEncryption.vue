@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Rsa from "../utils/rsa";
+import {encrypt,decrypt} from "../utils/crypto";
 export default {
     name:'rsaEncryption',
     data(){
@@ -20,8 +20,8 @@ export default {
     },
     methods: {
         reqTest() {
-            this.rsaPassword = Rsa.encrypt(this.password); // 加密
-            this.encPassword = Rsa.decrypt(this.rsaPassword); // 解密
+            this.rsaPassword = encrypt(this.password); // 加密
+            this.encPassword = decrypt(this.rsaPassword); // 解密
         }
     },
 
