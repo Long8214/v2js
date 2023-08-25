@@ -33,6 +33,7 @@ const  collapseTitle = () => import( '../pages/collapseTitle.vue' )
 const  map = () => import( '../pages/map.vue' )
 const  pixiJs = () => import( '../pages/pixiJs.vue' )
 const  dealPhoneNum = () => import('../pages/dealPhoneNum.vue')
+const  gradualChangeProgressBar = () => import('../pages/gradualChangeProgressBar.vue')
 // 使用Vue Router插件
 Vue.use(VueRouter);
 
@@ -42,6 +43,7 @@ const router = new VueRouter({
     routes: [
         { 
             path: '/',
+
             component: home ,
             redirect:'/tf_time',
             children:[
@@ -74,6 +76,7 @@ const router = new VueRouter({
                 { path: 'tcPlayer', component: tcPlayer, meta:{name:'videoJs 倍速播放'}},
                 { path: 'map', component: map, meta:{name:'map'}},
                 { path: 'dealPhoneNum', component: dealPhoneNum, meta:{name:'手机号中间4位脱敏'}},
+                { path: 'gradualChangeProgressBar', component: gradualChangeProgressBar, meta:{name:'音乐播放'}},
             ]
         },
     
