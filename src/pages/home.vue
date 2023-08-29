@@ -1,7 +1,11 @@
 <template>
   <section>
     <el-card class="bodyLeft">
-     <router-link :to="i.link" v-for="i in data" :key="i.link"> <el-button type="primary" > {{ i.name }} </el-button></router-link>
+     <router-link :to="i.link" v-for="i in data" :key="i.link"> 
+      <el-tooltip class="item" effect="dark" :content="i.name" placement="bottom">
+        <el-button type="primary" > {{ i.name }} </el-button>
+      </el-tooltip>
+     </router-link>
     </el-card>
     <el-card  class="bodyRight">
       <router-view></router-view>
