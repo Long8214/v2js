@@ -76,7 +76,7 @@ const router = new VueRouter({
                 { path: 'tcPlayer', component: tcPlayer, meta:{name:'videoJs 倍速播放'}},
                 { path: 'map', component: map, meta:{name:'map'}},
                 { path: 'dealPhoneNum', component: dealPhoneNum, meta:{name:'手机号中间4位脱敏'}},
-                { path: 'gradualChangeProgressBar', component: gradualChangeProgressBar, meta:{name:'音乐播放'}},
+                { path: 'gradualChangeProgressBar', component: gradualChangeProgressBar, meta:{name:'音乐播放和摇晃的小铃铛动画'}},
             ]
         },
     

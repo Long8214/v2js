@@ -1,68 +1,68 @@
 <template>
-  <div>
-       <div class="box">
-        <div class="container"> 
-            <div class="inner"></div>
-            <div class="percentage" :style="`height:${list.one}%`"></div>
-          </div>
-        <div class="container"> 
-            <div class="inner"></div>
-            <div class="percentage" :style="`height:${list.two}%`"></div>
-          </div>
-        <div class="container"> 
-            <div class="inner"></div>
-            <div class="percentage" :style="`height:${list.three}%`"></div>
-          </div>
-        <div class="container"> 
-            <div class="inner"></div>
-            <div class="percentage" :style="`height:${list.four}%`"></div>
-          </div>
-        <div class="container"> 
-            <div class="inner"></div>
-            <div class="percentage" :style="`height:${list.five}%`"></div>
-          </div>
-        <div class="container"> 
-            <div class="inner"></div>
-            <div class="percentage" :style="`height:${list.six}%`"></div>
-          </div>
-        <div class="container"> 
-            <div class="inner"></div>
-            <div class="percentage" :style="`height:${list.seven}%`"></div>
-          </div>
-        <div class="container"> 
-            <div class="inner"></div>
-            <div class="percentage" :style="`height:${list.eight}%`"></div>
-          </div>
-        <div class="container"> 
-            <div class="inner"></div>
-            <div class="percentage" :style="`height:${list.nine}%`"></div>
-          </div>
-        <div class="container"> 
-            <div class="inner"></div>
-            <div class="percentage" :style="`height:${list.ten}%`"></div>
-          </div>
-        <div class="container"> 
-            <div class="inner"></div>
-            <div class="percentage" :style="`height:${list.eleven}%`"></div>
-          </div>
-        <div class="container"> 
-            <div class="inner"></div>
-            <div class="percentage" :style="`height:${list.twelve}%`"></div>
-          </div>
-        <div class="container"> 
-            <div class="inner"></div>
-            <div class="percentage" :style="`height:${list.thirteen}%`"></div>
-          </div>
-       </div>
-       <audio controls loop  >
-            <source src="http://m801.music.126.net/20230825164029/021bf84d7fe90273734e5037b638cd07/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/28482036682/8f4a/af03/cb54/af89db478aae352165a3f0a5d44e1197.m4a" type="audio/ogg">
-            <source src="http://m801.music.126.net/20230825164029/021bf84d7fe90273734e5037b638cd07/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/28482036682/8f4a/af03/cb54/af89db478aae352165a3f0a5d44e1197.m4a" type="audio/mpeg">
-            您的浏览器不支持 audio 元素。
-            
-       </audio>
+  <div class="main" >
+    <div class="videoBox">
+         <div class="box">
+          <div class="container"> 
+              <div class="inner"></div>
+              <div class="percentage" :style="`height:${list.one}%`"></div>
+            </div>
+          <div class="container"> 
+              <div class="inner"></div>
+              <div class="percentage" :style="`height:${list.two}%`"></div>
+            </div>
+          <div class="container"> 
+              <div class="inner"></div>
+              <div class="percentage" :style="`height:${list.three}%`"></div>
+            </div>
+          <div class="container"> 
+              <div class="inner"></div>
+              <div class="percentage" :style="`height:${list.four}%`"></div>
+            </div>
+          <div class="container"> 
+              <div class="inner"></div>
+              <div class="percentage" :style="`height:${list.five}%`"></div>
+            </div>
+          <div class="container"> 
+              <div class="inner"></div>
+              <div class="percentage" :style="`height:${list.six}%`"></div>
+            </div>
+          <div class="container"> 
+              <div class="inner"></div>
+              <div class="percentage" :style="`height:${list.seven}%`"></div>
+            </div>
+          <div class="container"> 
+              <div class="inner"></div>
+              <div class="percentage" :style="`height:${list.eight}%`"></div>
+            </div>
+          <div class="container"> 
+              <div class="inner"></div>
+              <div class="percentage" :style="`height:${list.nine}%`"></div>
+            </div>
+          <div class="container"> 
+              <div class="inner"></div>
+              <div class="percentage" :style="`height:${list.ten}%`"></div>
+            </div>
+          <div class="container"> 
+              <div class="inner"></div>
+              <div class="percentage" :style="`height:${list.eleven}%`"></div>
+            </div>
+          <div class="container"> 
+              <div class="inner"></div>
+              <div class="percentage" :style="`height:${list.twelve}%`"></div>
+            </div>
+          <div class="container"> 
+              <div class="inner"></div>
+              <div class="percentage" :style="`height:${list.thirteen}%`"></div>
+            </div>
+         </div>
+         <audio controls loop  >
+              <source src="http://m801.music.126.net/20230825164029/021bf84d7fe90273734e5037b638cd07/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/28482036682/8f4a/af03/cb54/af89db478aae352165a3f0a5d44e1197.m4a" type="audio/ogg">
+              <source src="http://m801.music.126.net/20230825164029/021bf84d7fe90273734e5037b638cd07/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/28482036682/8f4a/af03/cb54/af89db478aae352165a3f0a5d44e1197.m4a" type="audio/mpeg">
+              您的浏览器不支持 audio 元素。
+         </audio>
+    </div>
+    <svg class="svg" @mouseenter="mouseenter" @mouseleave="mouseleave" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M19 13.586V10c0-3.217-2.185-5.927-5.145-6.742C13.562 2.52 12.846 2 12 2s-1.562.52-1.855 1.258C7.185 4.074 5 6.783 5 10v3.586l-1.707 1.707A.996.996 0 0 0 3 16v2a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-2a.996.996 0 0 0-.293-.707L19 13.586zM19 17H5v-.586l1.707-1.707A.996.996 0 0 0 7 14v-4c0-2.757 2.243-5 5-5s5 2.243 5 5v4c0 .266.105.52.293.707L19 16.414V17zm-7 5a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22z"></path></svg>
   </div>
-      
-
 </template>
 
 <script>
@@ -125,6 +125,14 @@ export default {
         // 暂停回调
         pause(){
             clearInterval(this.time)
+        },
+        mouseenter(){
+            let dom =  document.querySelector('.svg')
+            dom.classList.add('ddd')
+        },
+        mouseleave(){
+            let dom =  document.querySelector('.svg')
+            dom.classList.remove('ddd'); //删除类名
         }
     },
     beforeDestroy(){
@@ -135,6 +143,14 @@ export default {
 </script>
 
 <style scoped lang="less">
+.main{
+  width: 100%;
+  height: 100%;
+  background-color: #efeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
     .box{
         display: flex;
     }
@@ -210,5 +226,35 @@ export default {
     color: rgba(0, 0, 0, 0.6);
     text-shadow: unset;
     }
-    
+
+    .videoBox{
+      max-width: max-content;
+      padding: 30px;
+      transition: all 1s;
+      border-radius: 30px;
+      margin: 20px 0;
+    }
+    .videoBox:hover{
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.8),
+      inset 18px 18px 30px rgba(0, 0, 0, 0.1),
+      inset -18px -18px 30px rgba(255, 255, 255, 1);
+    }
+    @keyframes ball {
+      0% { transform: rotate(0deg) scale(1.2); }
+      45% { transform: rotate(10deg) scale(1.2); }
+      60% { transform: rotate(-10deg) scale(1.2);} 
+      75% { transform: rotate(10deg) scale(1.2); }
+      90% { transform: rotate(-10deg) scale(1.2);} 
+      100% { transform: rotate(0deg) scale(1);} 
+    }
+    .svg{
+      width: 100px;
+      height: 100px;
+    }
+    .ddd {
+      transition: all 1s;
+      animation-duration: 1s;
+      border-radius: 20px;
+      animation-name: ball;
+    }
 </style>
