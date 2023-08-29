@@ -36,6 +36,7 @@ const  dealPhoneNum = () => import('../pages/dealPhoneNum.vue')
 const  gradualChangeProgressBar = () => import('../pages/gradualChangeProgressBar.vue')
 const  tableCompare = () => import('../pages/tableCompare.vue')
 const  many_tag = () => import('../pages/many_tag.vue')
+const  NotFound = () => import('../pages/NotFound.vue')
 
 // 使用Vue Router插件
 Vue.use(VueRouter);
@@ -86,6 +87,12 @@ const router = new VueRouter({
 
             ]
         },
+        // 404
+        {
+            path: '/:catchAll(.*)',
+            name: 'not-found',
+            component: NotFound,
+          }
     
     ],
 });
