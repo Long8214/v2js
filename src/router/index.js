@@ -32,6 +32,9 @@ const  tcPlayer = () => import( '../pages/tcPlayer.vue' )
 const  collapseTitle = () => import( '../pages/collapseTitle.vue' )
 const  map = () => import( '../pages/map.vue' )
 const  dealPhoneNum = () => import('../pages/dealPhoneNum.vue')
+const  tableCompare = () => import('../pages/tableCompare.vue')
+const  many_tag = () => import('../pages/many_tag.vue')
+
 // 使用Vue Router插件
 Vue.use(VueRouter);
 
@@ -72,6 +75,10 @@ const router = new VueRouter({
                 { path: 'tcPlayer', component: tcPlayer, meta:{name:'videoJs 倍速播放'}},
                 { path: 'map', component: map, meta:{name:'map'}},
                 { path: 'dealPhoneNum', component: dealPhoneNum, meta:{name:'手机号中间4位脱敏'}},
+                { path: 'tableCompare', component: tableCompare, meta:{name:'单击右侧表格往左边插入'}},
+                { path: 'many_tag', component: many_tag, meta:{name:'循环多个tag并点击跳转+ 下拉框多选 '}},
+
+
             ]
         },
     
