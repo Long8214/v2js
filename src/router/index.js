@@ -36,6 +36,9 @@ const  dealPhoneNum = () => import('../pages/dealPhoneNum.vue')
 const  gradualChangeProgressBar = () => import('../pages/gradualChangeProgressBar.vue')
 const  tableCompare = () => import('../pages/tableCompare.vue')
 const  many_tag = () => import('../pages/many_tag.vue')
+const  aProgess = () => import('../pages/aProgess.vue')
+const  baojingAudio = () => import('../pages/baojingAudio.vue')
+
 
 // 使用Vue Router插件
 Vue.use(VueRouter);
@@ -44,7 +47,7 @@ Vue.use(VueRouter);
 const router = new VueRouter({
     path:'history',
     routes: [
-        { 
+        {
             path: '/',
 
             component: home ,
@@ -82,11 +85,13 @@ const router = new VueRouter({
                 { path: 'gradualChangeProgressBar', component: gradualChangeProgressBar, meta:{name:'音乐播放'}},
                 { path: 'tableCompare', component: tableCompare, meta:{name:'单击右侧表格往左边插入'}},
                 { path: 'many_tag', component: many_tag, meta:{name:'循环多个tag并点击跳转+ 下拉框多选 '}},
+                { path: 'aProgess', component: aProgess, meta:{name:'antd - progess '}},
+                { path: 'baojingAudio', component: baojingAudio, meta:{name:'声音报警 '}},
 
 
             ]
         },
-    
+
     ],
 });
 
