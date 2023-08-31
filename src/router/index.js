@@ -38,6 +38,8 @@ const  tableCompare = () => import('../pages/tableCompare.vue')
 const  many_tag = () => import('../pages/many_tag.vue')
 const  aProgess = () => import('../pages/aProgess.vue')
 const  baojingAudio = () => import('../pages/baojingAudio.vue')
+const  mulitiplayUpload = () => import('../pages/mulitiplayUpload.vue')
+
 
 const  NotFound = () => import('../pages/NotFound.vue')
 
@@ -88,6 +90,7 @@ const router = new VueRouter({
                 { path: 'many_tag', component: many_tag, meta:{name:'循环多个tag并点击跳转+ 下拉框多选 '}},
                 { path: 'aProgess', component: aProgess, meta:{name:'antd - progess '}},
                 { path: 'baojingAudio', component: baojingAudio, meta:{name:'声音报警 '}},
+                { path: 'mulitiplayUpload', component: mulitiplayUpload, meta:{name:'批量上传'}},
 
 
             ]
