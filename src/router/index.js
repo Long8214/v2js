@@ -39,6 +39,7 @@ const  many_tag = () => import('../pages/many_tag.vue')
 const  aProgess = () => import('../pages/aProgess.vue')
 const  baojingAudio = () => import('../pages/baojingAudio.vue')
 
+const  NotFound = () => import('../pages/NotFound.vue')
 
 // 使用Vue Router插件
 Vue.use(VueRouter);
@@ -82,7 +83,7 @@ const router = new VueRouter({
                 { path: 'tcPlayer', component: tcPlayer, meta:{name:'videoJs 倍速播放'}},
                 { path: 'map', component: map, meta:{name:'map'}},
                 { path: 'dealPhoneNum', component: dealPhoneNum, meta:{name:'手机号中间4位脱敏'}},
-                { path: 'gradualChangeProgressBar', component: gradualChangeProgressBar, meta:{name:'音乐播放'}},
+                { path: 'gradualChangeProgressBar', component: gradualChangeProgressBar, meta:{name:'音乐播放和摇晃的小铃铛动画'}},
                 { path: 'tableCompare', component: tableCompare, meta:{name:'单击右侧表格往左边插入'}},
                 { path: 'many_tag', component: many_tag, meta:{name:'循环多个tag并点击跳转+ 下拉框多选 '}},
                 { path: 'aProgess', component: aProgess, meta:{name:'antd - progess '}},
@@ -92,6 +93,13 @@ const router = new VueRouter({
             ]
         },
 
+        // 404
+        {
+            path: '/:catchAll(.*)',
+            name: 'not-found',
+            component: NotFound,
+          }
+    
     ],
 });
 
