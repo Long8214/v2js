@@ -3,7 +3,7 @@
     <el-upload
       ref="upload"
       :limit="10"
-      accept=".jpg,.gif,.png,.jpeg,.txt,.pdf,.doc,.docx,.xls,.xlsx"
+      accept=".jpg,.gif,.png,.jpeg,.txt,.pdf,.doc,.docx,.xls,.xlsx,.ts,.mp4"
       name="files"
       :multiple="true"
       action="https://jsonplaceholder.typicode.com/posts/"
@@ -31,10 +31,14 @@ export default {
   methods: {
     // 上传发生变化钩子
     handleFileChange(file, fileList) {
+      console.log('1fileList: ', fileList);
+      console.log('1file: ', file);
       this.upload.fileList = fileList;
     },
     // 删除之前钩子
     handleFileRemove(file, fileList) {
+      console.log('2fileList: ', fileList);
+      console.log('2file: ', file);
       this.upload.fileList = fileList;
     },
     // 提交上传文件
@@ -43,6 +47,7 @@ export default {
       let formData = new FormData();
       // 将上传的文件放到数据对象中
       this.upload.fileList.forEach((file) => {
+        console.log('3file: ', file);
         formData.append("file", file.raw);
         this.upload.fileName.push(file.name);
       });

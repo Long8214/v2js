@@ -39,6 +39,8 @@ const  many_tag = () => import('../pages/many_tag.vue')
 const  aProgess = () => import('../pages/aProgess.vue')
 const  baojingAudio = () => import('../pages/baojingAudio.vue')
 const  mulitiplayUpload = () => import('../pages/mulitiplayUpload.vue')
+const  chooseUpload = () => import('../pages/chooseUpload.vue')
+const  exerciseLongTest = () => import('../pages/exerciseLongTest.vue')
 
 
 const  NotFound = () => import('../pages/NotFound.vue')
@@ -91,6 +93,8 @@ const router = new VueRouter({
                 { path: 'aProgess', component: aProgess, meta:{name:'antd - progess '}},
                 { path: 'baojingAudio', component: baojingAudio, meta:{name:'声音报警 '}},
                 { path: 'mulitiplayUpload', component: mulitiplayUpload, meta:{name:'批量上传'}},
+                { path: 'chooseUpload', component: chooseUpload, meta:{name:'url/文件上传'}},
+                { path: 'exerciseLongTest', component: exerciseLongTest, meta:{name:'龙项目静态练习'}},
 
 
             ]
