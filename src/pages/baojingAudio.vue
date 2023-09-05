@@ -18,12 +18,12 @@ export default {
   },
   methods:{
     playSound() {
-      // const sound = new Howl({
-      //   src: ['../assets/audio/y1262.mp3']
-      // });
-      // sound.play();
-      let $audio = document.getElementsByTagName('audio')[0];//获取音乐DOM节点
-       $audio.play()
+      const sound = new Howl({
+        src: ['../assets/audio/y1262.mp3']
+      });
+      sound.play();
+      // let $audio = document.getElementsByTagName('audio')[0];//获取音乐DOM节点
+      //  $audio.play()
 
     }
 

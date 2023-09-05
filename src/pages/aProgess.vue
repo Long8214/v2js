@@ -1,5 +1,12 @@
 <template>
   <div>
+    <!-- <div class="progressWrap">
+    <el-progress type="circle" :percentage="100" status="success" ></el-progress>
+    </div>
+    <el-progress class="my-progress" type="circle" :percentage="100" status="success"></el-progress>
+    <el-progress class="my-progress" class-name="small" type="circle" :percentage="100" status="success"></el-progress> -->
+    <el-progress type="circle" :width="45" :height="45" :percentage="50"></el-progress>
+    <!-- 控制环形进度条大小 -->
     <a-progress
         :trail-color="'#488'"
         :stroke-width="10"
@@ -66,7 +73,7 @@ export default {
   data() {
     return {
       percent: 40,
-      status: 'normal',
+      // status: 'normal',
       linecap: 'square',
       format: () => `进度：${this.percent}%`,
     };
@@ -78,4 +85,31 @@ export default {
 /deep/ .ant-progress-inner{
   background: #ccc;
 }
+// /deep/ .el-progress .el-progress--circle .is-success .el-progress-circle{
+//   width: 20px;
+//   height: 20px;
+// }
+.progressWrap {
+   width: 20px;
+   height: 20px;
+}
+.el-progress__circle {
+  color: aqua;
+}
+.my-progress {
+  width: 20px;
+  height: 20px;
+}
+
+.my-progress .el-progress__circle {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+.small {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+}
+
 </style>
