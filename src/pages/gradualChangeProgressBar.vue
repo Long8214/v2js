@@ -1,5 +1,6 @@
 <template>
   <div class="main" >
+    <el-button @click="add">切换状态</el-button>
     <div class="videoBox">
          <div class="box">
           <div class="container"> 
@@ -55,7 +56,7 @@
               <div class="percentage" :style="`height:${list.thirteen}%`"></div>
             </div>
          </div>
-         <audio controls loop  >
+         <audio  controls loop ref="audioElement">
               <source src="http://m801.music.126.net/20230825164029/021bf84d7fe90273734e5037b638cd07/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/28482036682/8f4a/af03/cb54/af89db478aae352165a3f0a5d44e1197.m4a" type="audio/ogg">
               <source src="http://m801.music.126.net/20230825164029/021bf84d7fe90273734e5037b638cd07/jdyyaac/obj/w5rDlsOJwrLDjj7CmsOj/28482036682/8f4a/af03/cb54/af89db478aae352165a3f0a5d44e1197.m4a" type="audio/mpeg">
               您的浏览器不支持 audio 元素。
@@ -85,13 +86,18 @@ export default {
                 twelve:0,
                 thirteen:0
             },
-            time:null
+            time:null,
+            isMuted:true
         }
     },
     mounted(){
         this.init()
     },
     methods:{
+        add(){
+          this.isMuted = !this.isMuted;
+          this.$refs.audioElement.muted = !this.isMuted;
+        },
         init(){
             //初始化一次
             for(let i in this.list){
