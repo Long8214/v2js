@@ -42,6 +42,7 @@ const  mulitiplayUpload = () => import('../pages/mulitiplayUpload.vue')
 const  chooseUpload = () => import('../pages/chooseUpload.vue')
 const  exerciseLongTest = () => import('../pages/exerciseLongTest.vue')
 const  cockpit = () => import('../pages/cockpit/cockpit.vue')
+const  testJuxing = () => import('../pages/testJuxing.vue')
 
 
 const  NotFound = () => import('../pages/NotFound.vue')
@@ -97,6 +98,7 @@ const router = new VueRouter({
                 { path: 'chooseUpload', component: chooseUpload, meta:{name:'url/文件上传'}},
                 { path: 'exerciseLongTest', component: exerciseLongTest, meta:{name:'龙项目静态练习'}},
                 { path: 'cockpit', component: cockpit, meta:{name:'驾驶舱页面'}},
+                { path: 'testJuxing', component: testJuxing, meta:{name:'测试在图片上绘制矩形'}},
 
 
             ]
