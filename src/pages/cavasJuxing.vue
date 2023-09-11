@@ -13,10 +13,6 @@
 <script>
 export default {
   props: {
-    imageUrl: {
-      type: String,
-      required: true
-    },
     coords: {
       type: Array, // 坐标 [x, y, width, height]
       required: true
@@ -45,7 +41,7 @@ export default {
       const ctx = canvas.getContext("2d");
       const [x, y, width, height] = this.coords;
       ctx.strokeStyle = "#FF0000";
-      ctx.lineWidth = 4;
+      ctx.lineWidth = 2;
       ctx.strokeRect(x, y, width, height);
     }
   }
