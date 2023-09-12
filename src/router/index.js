@@ -44,6 +44,7 @@ const  exerciseLongTest = () => import('../pages/exerciseLongTest.vue')
 const  cockpit = () => import('../pages/cockpit/cockpit.vue')
 const  testJuxing = () => import('../pages/testJuxing.vue')
 const  moreJuxingkuang = () => import('../pages/moreJuxingkuang.vue')
+const  imgAmplificationRedFrame = () => import('../pages/imgAmplificationRedFrame.vue')
 
 
 const  NotFound = () => import('../pages/NotFound.vue')
@@ -101,6 +102,7 @@ const router = new VueRouter({
                 { path: 'cockpit', component: cockpit, meta:{name:'驾驶舱页面'}},
                 { path: 'testJuxing', component: testJuxing, meta:{name:'测试在图片上绘制矩形'}},
                 { path: 'moreJuxingkuang', component: moreJuxingkuang, meta:{name:'Vue中在svg上动态画出多个矩形（框选效果，获取坐标）'}},
+                { path: 'imgAmplificationRedFrame', component: imgAmplificationRedFrame, meta:{name:'点击图片放大并根据坐标显示红框'}},
 
 
             ]

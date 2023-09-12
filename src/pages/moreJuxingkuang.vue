@@ -1,10 +1,10 @@
 <template>
-   <div id="app" class="test" style="background-color: burlywood;">
+   <div id="app" class="test" >
     <svg id="svgId" width="720" height="540">
-      <image id="imgId" x="0" y="0" width="720" height="540" href="../assets/images/cat.jpg"></image>
-      <template v-for="(val, i) in rectArr" :key="">
-        <rect  :id="val.id" :x="val.x1" :y="val.y1" :width="val.x2-val.x1" :height="val.y2-val.y1" style="fill:rgb(0,0,255);stroke-width:1;stroke:red;fill-opacity:0.1"/>
-        <text :key="i" :x="val.x1+(val.x2-val.x1)/2-5" :y="val.y1+(val.y2-val.y1)/2+5" fill="red">{{val.id+1}}</text>
+      <image id="imgId" x="0" y="0" width="720" height="540" href="../assets/images/驾驶舱白.png"></image>
+      <template v-for="(val, i) in rectArr" >
+        <rect  :id="val.id" :x="val.x1" :y="val.y1" :width="val.x2-val.x1" :height="val.y2-val.y1" style="fill:rgba(0,0,0,0);stroke-width:1;stroke:red;fill-opacity:0.1"/>
+        <!-- <text :key="i" :x="val.x1+(val.x2-val.x1)/2-5" :y="val.y1+(val.y2-val.y1)/2+5" fill="red">{{val.id+1}}</text> -->
       </template>
     </svg>
     <div>
@@ -150,6 +150,15 @@ export default {
       }
     },
     watch: {
+
+      rectArr: {
+        //深度监听，可监听到对象、数组的变化
+        handler(currentValue, oldValue) {
+          console.log('currentValue: ', currentValue);
+          
+        },
+        deep: true, //true 深度监听
+      },
       num: {
         //深度监听，可监听到对象、数组的变化
         handler(currentValue, oldValue) {
