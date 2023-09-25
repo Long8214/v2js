@@ -45,9 +45,9 @@ const  cockpit = () => import('../pages/cockpit/cockpit.vue')
 const  testJuxing = () => import('../pages/testJuxing.vue')
 const  moreJuxingkuang = () => import('../pages/moreJuxingkuang.vue')
 const  imgAmplificationRedFrame = () => import('../pages/imgAmplificationRedFrame.vue')
-
-
+const  collTable = () => import('../pages/collTable.vue')
 const  NotFound = () => import('../pages/NotFound.vue')
+const  cengjiTable = () => import('../pages/cengjiTable.vue')
 
 // 使用Vue Router插件
 Vue.use(VueRouter);
@@ -103,6 +103,8 @@ const router = new VueRouter({
                 { path: 'testJuxing', component: testJuxing, meta:{name:'测试在图片上绘制矩形'}},
                 { path: 'moreJuxingkuang', component: moreJuxingkuang, meta:{name:'Vue中在svg上动态画出多个矩形（框选效果，获取坐标）'}},
                 { path: 'imgAmplificationRedFrame', component: imgAmplificationRedFrame, meta:{name:'点击图片放大并根据坐标显示红框'}},
+                { path: 'collTable', component: collTable, meta:{name:'合并表格单元格'}},
+                { path: 'cengjiTable', component: cengjiTable, meta:{name:'层级下拉表格'}},
 
 
             ]
