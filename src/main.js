@@ -24,7 +24,7 @@ import * as echarts from 'echarts'
 // })
 
 
-
+//test
 
 Vue.use(ElementUI);
 Vue.use(Antd);
